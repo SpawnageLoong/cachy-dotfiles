@@ -54,13 +54,6 @@ hl.window_rule({
 	center = true,
 })
 
--- nmrs-ui
-hl.window_rule({
-	name = "float-nmrs",
-	match = { class = "org.nmrs.ui" },
-	float = true,
-})
-
 -- Firefox download window
 hl.window_rule({
 	name = "size-firefox-download",
@@ -75,7 +68,7 @@ hl.window_rule({
 	name = "size-ark-extract",
 	match = { title = "^(Extract - Ark)$" },
 	float = true,
-	center = true,
+	center = false,
 	size = { 900, 900 },
 })
 
@@ -89,4 +82,83 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 900, 720 },
+})
+
+-- Make file picker dialogs float
+hl.window_rule({
+	name = "float-file-picker",
+	match = { class = "xdg-desktop-portal-gtk" },
+	float = true,
+	center = true,
+	size = { 900, 900 },
+})
+
+-- imageviewer
+hl.window_rule({
+	name = "float-imageviewer",
+	match = { class = "com.github.aliencoweatcake.imageviewer" },
+	float = true,
+	center = true,
+	size = { 1920, 1354 },
+})
+
+-- VLC Media Player
+hl.window_rule({
+	name = "float-vlc",
+	match = { title = "^(VLC media player)$" },
+	float = true,
+	center = true,
+	size = { 2245, 1354 },
+})
+hl.window_rule({
+	name = "no-focus-vlc",
+	match = { class = "vlc" },
+	no_initial_focus = true,
+})
+
+-- Wine
+hl.window_rule({
+	name = "float-wine",
+	match = { title = "^(Wine Desktop)$" },
+	float = true,
+	center = true,
+})
+
+-- Steam Proton
+hl.window_rule({
+	name = "float-proton",
+	match = { initial_class = "^(steam_proton)$" },
+	float = true,
+	center = true,
+})
+
+-- Gamescope
+hl.window_rule({
+	name = "float-gamescope",
+	match = { initial_class = "^(gamescope)$" },
+	float = true,
+	center = true,
+	size = { 1920, 1080 },
+})
+
+-- RPGMaker cicpoffs mount
+hl.window_rule({
+	name = "float-rpgm",
+	match = { initial_class = "^.*(RPG Maker MV).*$" },
+	float = true,
+	center = true,
+})
+
+-- TiTS
+hl.window_rule({
+	name = "float-tits",
+	match = { initial_class = "tits" },
+	float = true,
+})
+
+-- Davinci Resolve
+hl.window_rule({
+	name = "no-focus-resolve",
+	match = { class = "resolve" },
+	no_initial_focus = true,
 })
